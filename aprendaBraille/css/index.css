@@ -1,0 +1,164 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #17881b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    max-width: 600px;
+    background-color: #ffffff; /* Fundo branco dentro do contêiner */
+}
+
+.container-help { /* container do help.html */
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px;
+    margin: 50px auto;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.form-container { /* Container do formulário*/
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.form-control { /*campo digitavel alfabeto.html*/
+    display: block;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 10px;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: #fff;
+  }
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label,
+select,
+input {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+
+h1 {
+    color: #333;
+}
+
+p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #333; /* Cor de fundo mais escura para o botão */
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.button a {
+    color: white;
+    text-decoration: none;
+  }
+
+
+.button:hover {
+    background-color: #555; /* Cor mais escura ao passar o mouse sobre o botão */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.options a {
+    display: inline-block;
+    background-color: #333; /* Cor de fundo mais escura para o botão */
+    color: white;
+    margin-block: 5px;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.options a:hover {
+    background-color: #555;
+    font-weight: bold;
+}
+
+
+.braille-doc2 span {
+    position: relative;
+    top: -8px;
+    margin: 0 5px 0 20px;
+    display: inline-block;
+    text-align: center;
+  }
+
+  
+.braille {
+    margin-top: 20px;
+  }
+  .braille-doc span,
+  .braille-doc2 span {
+    position: relative;
+    top: -8px;
+    margin: 0 5px 0 20px;
+    display: inline-block;
+    text-align: center;
+  }
+  .braille-doc > div {
+    display: inline-block;
+  }
+  .braille-doc2 > div {
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  .braille-doc2 span {
+    min-width: 140px;
+    text-align: left;
+  }     

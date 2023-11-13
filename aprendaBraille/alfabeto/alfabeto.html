@@ -1,0 +1,41 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinar Letras</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link id="css" href="../css/braille-big.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./css/br.gif">
+    
+</head>
+
+<body>
+    <div class="container">
+        <h1>ALFABETO</h1>
+        <h2>Digite a letra que corresponde às células braille mostradas abaixo.</h2>
+        <div id="brailleConteudo"></div>
+        <p><br /><strong>Resposta</strong></p>
+        <input id="entrada" class="form-control" type="text" style="width:200px">
+        <button onclick="verificar()" class="button">Enviar</button>
+        <button class="button"><a href="../help.html" target="_blank">Ajuda</a></button>
+        <p>Respostas Corretas: <span id="contCorretas">0</span></p>
+        <p>Respostas Incorretas: <span id="contIncorretas">0</span></p>
+
+    </div>
+
+
+    <footer>
+        <button class="button"><a href="../menu.html">Menu</a></button>
+    </footer>
+
+</body>
+
+
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+<script src="../js/firebase.js"></script>
+<script src="../js/login.js"></script>
+<script src="../js/braille-tools.js"></script>
+<script src="../js/alfabeto.js"></script>
+
+

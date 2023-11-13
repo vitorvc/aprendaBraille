@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="icon" type="image/png" href="./css/br.gif">
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script>
+    <script type="module" src="./js/firebase.js"></script>
+    <script type="module" src="./js/formulario.js"></script>
+
+    <title>Formulário</title>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Formulário</h2>
+        <form id="form">
+            <label for="email">Qual o seu email?</label>
+            <input type="email" id="email" required>
+
+            <label for="genero">Qual é o seu gênero?</label>
+            <select id="genero" required>
+                <option selected disabled ></option>
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+                <option value="Preferiu não informar">Prefiro não dizer</option>
+            </select>
+
+            <label for="idade">Qual a sua idade?</label>
+            <input type="number" id="idade" required>
+
+            <label for="formacao">Formação acadêmica (última concluída):</label>
+            <select id="formacao" required>
+                <option selected disabled > </option>
+                <option value="Graduação">Graduação</option>
+                <option value="Especialização">Especialização</option>
+                <option value="Mestrado">Mestrado</option>
+                <option value="Doutorado">Doutorado</option>
+            </select>
+
+            <label for="nacionalidade">Qual a sua nacionalidade?</label>
+            <input type="text" id="nacionalidade" required>
+
+            <label for="eprofessor">Você é professor(a)?</label>
+            <select id="eprofessor" required>
+                <option selected disabled > </option>
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+
+            <label for="atuacao">Qual a sua formação?</label>
+            <select id="atuacao" required>
+                <option selected disabled > </option>
+                <option value="Computação">Computação</option>
+                <option value="Engenharia">Engenharia</option>
+                <option value="Matemática">Matemática</option>
+                <option value="Letras">Letras</option>
+                <option value="Física">Física</option>
+                <option value="Pedagogia">Pedagogia</option>
+                <option value="Educação Física">Educação Física</option>
+                <option value="Química">Química</option>
+                <option value="História">História</option>
+                <option value="Outros">Outros</option>
+            </select>
+
+            <label for="braille">Qual o seu nível de conhecimento em Braille?</label>
+            <select id="braille" required>
+                <option selected disabled > </option>
+                <option value="Nenhum">Nenhum</option>
+                <option value="Pouco">Pouco</option>
+                <option value="Básico">Básico</option>
+                <option value="Intermediário">Intermediário</option>
+                <option value="Avançado">Avançado</option>
+            </select>
+
+            <button class="button" type="submit">Enviar</button>
+        </form>
+    </div>
+
+</body>
+
+
+</html>
