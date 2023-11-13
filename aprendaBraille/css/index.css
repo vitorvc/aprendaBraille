@@ -10,12 +10,19 @@ body {
 }
 
 .container {
+    
     text-align: center;
     padding: 50px;
     border-radius: 10px;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
     margin: 50px auto;
     max-width: 600px;
+    background-color: #ffffff; /* Fundo branco dentro do contêiner */
+}
+
+.container2 {
+    display:inline-block;
+    text-align: center;
     background-color: #ffffff; /* Fundo branco dentro do contêiner */
 }
 
@@ -63,7 +70,7 @@ input {
 }
 
 
-h1 {
+h1,h2 {
     color: #333;
 }
 
