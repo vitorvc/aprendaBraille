@@ -1,10 +1,12 @@
+<html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css"> <!-- Estilo padrão das páginas -->
+    <link rel="icon" type="image/png" href="./css/br.gif"> <!-- Icone da página -->
+    
     <title>Menu</title>
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="icon" type="image/png" href="./css/br.gif">
-   
 </head>
 
 <body>
@@ -20,15 +22,15 @@
     </div>
 
     <footer>
-        <button onclick="logout()" class="button">Sair</button>
+        <button style="text-align: center;" onclick="logout()" class="button">Sair</button>
         <div id="user-div">
-            <h2></h2>
+            <h2 ></h2>
     </footer>
 </body>
 
-<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script>
-<script src="./js/firebase.js"> </script>
-<script src="./js/login.js"> </script>
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script> <!-- Biblioteca Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script><!-- Biblioteca de autenticação Firebase -->
+<script src="./js/firebase.js"> </script> <!-- Script iniciando o Firebase -->
+<script src="./js/login.js"> </script> <!-- Script com as funções de Login -->
 
 </html>

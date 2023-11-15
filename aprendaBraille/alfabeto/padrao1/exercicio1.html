@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/index.css"> <!-- Estilo padrão das páginas -->
+    <link id="css" href="../../css/braille-big.css" rel="stylesheet"> <!-- faz parte da biblioteca Braille -->
+    <script src="../../js/braille-tools.js"></script> <!-- faz parte da biblioteca Braille -->
+    <link rel="icon" type="image/png" href="../css/br.gif"> <!-- Icone da página -->
+
+    <title>Exercicio 1</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 >Exercicio 1</h1>
+        <p text-align: center;>Selecione somente palavras que comecem com as letras <strong>E</strong> e <strong>I</strong></p>
+  
+       
+            <label>
+                <input type="checkbox" name="words" value="escola"><script> document.write(br.braille("escola"))</script>
+            </label>
+
+
+            <label>
+                <input type="checkbox" name="words" value="teste"> <script> document.write(br.braille("teste"))</script>
+            </label>
+
+            <label>
+                <input type="checkbox" name="words" value="farda"> <script> document.write(br.braille("farda"))</script>
+            </label>
+
+            <label>
+                <input type="checkbox" name="words" value="inicio"> <script> document.write(br.braille("inicio"))</script>
+            </label>
+
+            <label>
+                <input type="checkbox" name="words" value="raio"> <script> document.write(br.braille("raio"))</script>
+            </label>
+
+            <label>
+                <input type="checkbox" name="words" value="casa"> <script> document.write(br.braille("casa"))</script>
+            </label>
+
+
+        
+        
+        <button class="button"> <a href="./exercicio2.html" >Próximo</a></button>
+    </div>
+
+    <footer>
+        <button class="button"><a href="../../menu.html">Menu</a></button>
+    </footer>
+</body>
+
+</html>
