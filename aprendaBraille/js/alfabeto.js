@@ -1,5 +1,6 @@
 const db = firebase.firestore();
 firebase.initializeApp(firebaseConfig);
+
 var letraAtual;
 var contCorretas = 0;
 var contIncorretas = 0;
@@ -7,7 +8,7 @@ var contIncorretas = 0;
 
 
 function enviarDadosParaFirestore(email, corretas, incorretas) {
-    db.collection("respostas").doc(email).set({
+    db.collection("respostasAlfabeto").doc(email).set({
         respostasCorretas: corretas,
         respostasIncorretas: incorretas
     })

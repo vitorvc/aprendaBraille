@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css"> <!-- Estilo padrão das páginas -->
     <link id="css" href="../css/braille-big.css" rel="stylesheet"> <!-- faz parte da biblioteca Braille -->
-    <script src="../js/braille-tools.js"></script> <!-- faz parte da biblioteca Braille -->
     <link rel="icon" type="image/png" href="./css/br.gif"> <!-- Icone da página -->
 
     <title>Treinar Palavras</title>
@@ -30,50 +29,14 @@
         <button class="button"><a href="../menu.html">Menu</a></button>
     </footer>
 
-    <script>
-        var palavraAtual; 
-        var contCorretas = 0;
-        var contIncorretas = 0;
-        
-        function gerarLetra() {
-            const palavras = ["cachorro", "gato", "passaro", "computador", "cafe", "felicidade", "sorvete", "bicicleta", "amizade", "praia", "montanha", "livro", "musica", "escola", "trabalho", "viagem", "familia", "natureza", "sonho"];
-            var palavraAleatoria = palavras[Math.floor(Math.random() * palavras.length)];
-            palavraAtual = palavraAleatoria;
-            return palavraAleatoria;
-        }
-
-        function atualizarBraille() {
-            document.getElementById("brailleConteudo").innerHTML = br.braille(gerarLetra());
-        }
-
-        function atualizarContadores() {
-            document.getElementById("contCorretas").textContent = contCorretas;
-            document.getElementById("contIncorretas").textContent = contIncorretas;
-        }
-
-        function verificar() {
-    var resposta = document.getElementById("entrada").value;
-    if (resposta === palavraAtual) {//
-        contCorretas++;
-        atualizarContadores();
-        atualizarBraille(); // Atualiza a célula Braille
-        alert("Correto!");
-        
-        document.getElementById("entrada").value = "";// limpa o input
-    } else {
-        contIncorretas++;
-        atualizarContadores();
-        alert("Tente novamente.");
-    }
-    document.getElementById("entrada").value = ""; // limpa o input
-
-}
-
-        
-        atualizarBraille();// Mostrar a palavra Braille ao carregar a página na primeira vez
-        atualizarContadores(); 
-    </script>
-
 </body>
+
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script> <!-- Biblioteca Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script> <!-- Biblioteca de autenticação Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore-compat.js"></script> <!-- Biblioteca de envio de dados para o BD -->
+<script src="../js/firebase.js"></script> <!-- Script iniciando o Firebase -->
+<script src="../js/login.js"></script> <!-- Script com as funções de Login -->
+<script src="../js/braille-tools.js"></script> <!-- Script com as funções da biblioteca Braille -->
+<script src="../js/palavras.js"></script> <!-- Script com as funções do alfabeto -->
 
 </html>

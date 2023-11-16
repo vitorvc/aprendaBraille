@@ -19,38 +19,43 @@
 
        
             <label>
-                <input  type="checkbox" name="words" value="cantar"> <script> document.write(br.braille("cantar"))</script>
+                <input  type="checkbox" name="words" value="Cantar"> <script> document.write(br.braille("Cantar"))</script>
             </label>
 
             <label>
-                <input type="checkbox" name="words" value="toque"> <script> document.write(br.braille("toque"))</script>
+                <input type="checkbox" name="words" value="Toque"> <script> document.write(br.braille("Toque"))</script>
             </label>
 
             <label>
-                <input type="checkbox" name="words" value="azeite"> <script> document.write(br.braille("azeite"))</script>
+                <input type="checkbox" name="words" value="Azeite"> <script> document.write(br.braille("Azeite"))</script>
             </label>
 
             <label>
-                <input type="checkbox" name="words" value="susto"> <script> document.write(br.braille("susto"))</script>
+                <input type="checkbox" name="words" value="Susto"> <script> document.write(br.braille("Susto"))</script>
             </label>
 
             <label>
-                <input type="checkbox" name="words" value="amarelo"> <script> document.write(br.braille("trocas"))</script>
+                <input type="checkbox" name="words" value="Trocas"> <script> document.write(br.braille("Trocas"))</script>
             </label>
 
             <label>
-                <input type="checkbox" name="words" value="felicidade"> <script> document.write(br.braille("felicidade"))</script>
+                <input type="checkbox" name="words" value="Felicidade"> <script> document.write(br.braille("Felicidade"))</script>
             </label>
 
-
-        
-        
-            <button class="button"> <a href="./exercicio4.html" >Próximo</a></button>
+            <button class="button" onclick="verificar()"> <a  >Próximo</a></button>
     </div>
 
     <footer>
         <button class="button"><a href="../../menu.html">Menu</a></button>
     </footer>
 </body>
+
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script> <!-- Biblioteca Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script> <!-- Biblioteca de autenticação Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore-compat.js"></script> <!-- Biblioteca de envio de dados para o BD -->
+<script src="../../js/firebase.js"></script> <!-- Script iniciando o Firebase -->
+<script src="../../js/login.js"></script> <!-- Script com as funções de Login -->
+<script src="./js/exercicio3.js"></script> <!-- Script com as funções do alfabeto -->
+
 
 </html>

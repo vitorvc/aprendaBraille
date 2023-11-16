@@ -19,30 +19,30 @@
         <p text-align: center;>Selecione as palavras que contem as letras <strong>A</strong>,<strong> B</strong>,<strong> K</strong>,<strong> L</strong></p>
 
         <label>
-            <input type="checkbox" name="words" value="abrir"> <script> document.write(br.braille("abrir"))</script>
+            <input type="checkbox" name="words" value="Abrir"> <script> document.write(br.braille("Abrir"))</script>
         </label>
        
         <label>
-            <input type="checkbox" name="words" value="abrir"> <script> document.write(br.braille("chute"))</script>
+            <input type="checkbox" name="words" value="Chute"> <script> document.write(br.braille("Chute"))</script>
         </label>
 
         <label>
-            <input type="checkbox" name="words" value="laudo"> <script> document.write(br.braille("laudo"))</script>
+            <input type="checkbox" name="words" value="Laudo"> <script> document.write(br.braille("Laudo"))</script>
         </label>
 
         <label>
-            <input type="checkbox" name="words" value="skate"> <script> document.write(br.braille("skate"))</script>
+            <input type="checkbox" name="words" value="Skate"> <script> document.write(br.braille("Skate"))</script>
         </label>
 
         <label>
-            <input type="checkbox" name="words" value="junto"> <script> document.write(br.braille("junto"))</script>
+            <input type="checkbox" name="words" value="Junto"> <script> document.write(br.braille("Junto"))</script>
         </label>
 
         <label>
-            <input type="checkbox" name="words" value="strike"> <script> document.write(br.braille("strike"))</script>
+            <input type="checkbox" name="words" value="Strike"> <script> document.write(br.braille("Strike"))</script>
         </label>
 
-        <button class="button"> <a href="./exercicio3.html" >Próximo</a></button>
+        <button class="button" onclick="verificar()"> <a  >Próximo</a></button>
         
     </div>
 
@@ -50,5 +50,12 @@
         <button class="button"><a href="../../menu.html">Menu</a></button>
     </footer>
 </body>
+
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script> <!-- Biblioteca Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script> <!-- Biblioteca de autenticação Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore-compat.js"></script> <!-- Biblioteca de envio de dados para o BD -->
+<script src="../../js/firebase.js"></script> <!-- Script iniciando o Firebase -->
+<script src="../../js/login.js"></script> <!-- Script com as funções de Login -->
+<script src="./js/exercicio1.js"></script> <!-- Script com as funções do alfabeto -->
 
 </html>
