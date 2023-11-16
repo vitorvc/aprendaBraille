@@ -15,7 +15,7 @@ form.addEventListener('submit', (e) => {
     const atuacao = form['atuacao'].value;
     const braille = form['braille'].value;
 
-    db.collection('respostas').add({
+    db.collection('respostasForm').add({
         email: email,
         genero: genero,
         idade: idade,

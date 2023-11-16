@@ -7,7 +7,6 @@ var contIncorretas = 0;
 
 
 function enviarDadosParaFirestore(email, corretas, incorretas) {
-    // Substitua "usuarios" pelo nome da sua coleção no Firestore
     db.collection("respostas").doc(email).set({
         respostasCorretas: corretas,
         respostasIncorretas: incorretas
@@ -41,17 +40,16 @@ var resposta = document.getElementById("entrada").value;
 if (resposta === letraAtual) {
 contCorretas++;
 atualizarContadores();
-atualizarBraille(); // Atualiza a célula Braille
+atualizarBraille();
 alert("Correto!");
 
-// Adicione lógica para enviar dados para o Firestore
-var emailUsuario =   firebase.auth().currentUser.email; // Substitua pelo método real de obter o e-mail do usuário
+var emailUsuario =   firebase.auth().currentUser.email; 
 document.getElementById("entrada").value ='';
 enviarDadosParaFirestore(emailUsuario, contCorretas, contIncorretas);
 } else {
 contIncorretas++;
 atualizarContadores();
-var emailUsuario =   firebase.auth().currentUser.email; // Substitua pelo método real de obter o e-mail do usuário
+var emailUsuario =   firebase.auth().currentUser.email; 
 enviarDadosParaFirestore(emailUsuario, contCorretas, contIncorretas);
 alert("Tente novamente.");
 }

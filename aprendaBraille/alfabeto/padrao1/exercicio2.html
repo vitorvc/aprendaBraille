@@ -45,12 +45,21 @@
 
         
         
-            <button class="button"> <a href="./exercicio3.html" >Próximo</a></button>
+            <button class="button" onclick="verificar()"> <a  >Próximo</a></button>
     </div>
 
     <footer>
         <button class="button"><a href="../../menu.html">Menu</a></button>
+        <div id="user-div">
+            <h3></h3>
     </footer>
 </body>
+
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script> <!-- Biblioteca Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script> <!-- Biblioteca de autenticação Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script> <!-- Biblioteca de envio de dados para o BD -->
+<script src="../../js/firebase.js"></script> <!-- Script iniciando o Firebase -->
+<script src="../../js/login.js"></script> <!-- Script com as funções de Login -->
+<script src="./js/exercicio2.js"></script> <!-- Script com as funções do alfabeto -->
 
 </html>
