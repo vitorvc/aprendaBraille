@@ -15,6 +15,7 @@ header {
     text-align: center;
     position: fixed;
     width: 100%;
+    font-size: 14px;
     top: 0;
     z-index: 1000; 
 }
@@ -113,7 +114,7 @@ p {
     padding: 14px 20px;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 5px;
     transition: background-color 0.3s;
     cursor: pointer;
