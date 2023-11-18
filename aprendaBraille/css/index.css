@@ -9,6 +9,15 @@ body {
     height: 100vh;
 }
 
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; 
+}
 
 .braille-section {
     display: flex;
@@ -25,12 +34,14 @@ body {
     margin: 50px auto;
     max-width: 600px;
     background-color: #ffffff; /* Fundo branco dentro do contêiner */
+    margin: auto;
 }
 
 .container2 {
     display:inline-block;
     text-align: center;
     background-color: #ffffff; /* Fundo branco dentro do contêiner */
+    margin: auto;
 }
 
 .container-help { /* container do help.html */
@@ -40,6 +51,7 @@ body {
     margin: 50px auto;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
+    margin: auto;
 }
 
 .form-container { /* Container do formulário*/
@@ -49,6 +61,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #ffffff;
+    margin: auto;
 }
 
 .form-control { /*campo digitavel alfabeto.html*/
