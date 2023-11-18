@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/index.css"> <!-- Estilo padrão das páginas -->
+    <link id="css" href="../../css/braille-big.css" rel="stylesheet"> <!-- faz parte da biblioteca Braille -->
+    <script src="../../js/braille-tools.js"></script> <!-- faz parte da biblioteca Braille -->
+    <link rel="icon" type="image/png" href="../css/br.gif"> <!-- Icone da página -->
+
+    <title>Padrões</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div > <h2>Sistema Braille</h2> </div>
+        <p style="text-align: justify;">Criado na França, em 1825, por Louis Braille, o Sistema Braille de leitura tátil e escrita para cegos, tornou-se indispensável para o ensino-aprendizagem na formação dos DV.
+         O Braille baseia-se na combinação de 63 pontos, dispostos em forma de matriz 3x2, com seis pontos básicos, organizados espacialmente em duas colunas verticais com três pontos à direita e três à esquerda de uma cela básica denominada Cela Braille.</p>
+
+        <p style="text-align: justify;">O Braille possui formação de letras e números, de forma que a combinação única dos pontos representam caracteres diferentes, sendo assim, possui as seguintes regras de disposição dos sinais: </p>   
+       
+        <ul>
+            <li>
+        	A 1ª série - denominada de série superior - Utiliza os 4 pontos superiores, 1245, para as letras de 𝑎 até 𝑗;
+            </li>
+            <li>
+            A 2ª série é resultante da adição do ponto 3 a cada um dos sinais da 1ª série, ou seja, faz uso da mesma sequência de pontos das primeiras letras, mas agora agregando o ponto 3 para representar as próximas 10 letras de 𝑘 até 𝑡;
+            </li>
+            <li>
+            Em seguida, agregou os pontos 3 e 6 aos sinais da 1ª série para as letras 𝑢 até 𝑧, com a exceção do 𝑤, pois não existia na Língua Francesa naquela época;
+            </li>
+            <li>
+             O sistema utiliza a noção de caracteres de escape, em que os códigos mudam de sentido quando precedidos por outros, como é o caso dos números de 1, 2, ..., 8, 9 e 0 que utilizam a mesma sequência de pontos da 1ª série, mas associado com o símbolo de numeral em Braille  , como mostra a Figura 1.
+            </li>
+            
+        </ul>
+
+        <img src="../css/AlfabetoBraillePorSerie.png" alt="Sinais Básicos do Sistema Braille">
+        <p style="font-size: 12px; text-align: center;">Figura 1: Sinais Básicos do Sistema Braille</p>
+        
+        <p style="text-align: justify;">
+            Assim, organizou-se as combinações das letras com base na semelhança visual dos caracteres Braille, em três níveis de instrução, que serão estudados nas próximas páginas.
+        </p>
+
+        <button class="button"> <a href="../padrao1/padrao1.html" >Avançar</a></button> 
+    </div>
+
+    <footer>
+        <button class="button"><a href="../../menu.html">Inicio</a></button>
+    </footer>
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script> <!-- Biblioteca Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script><!-- Biblioteca de autenticação Firebase -->
+<script src="../../js/firebase.js"> </script> <!-- Script iniciando o Firebase -->
+<script src="../../js/login.js"> </script> <!-- Script com as funções de Login -->
+
+</html>

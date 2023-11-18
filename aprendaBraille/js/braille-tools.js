@@ -65,7 +65,7 @@ var br = {
                         break;
 
                     case "=":
-                        txt+=BrailleChar("par", "parenthesis"); 
+                        txt+=BrailleChar("par", "="); 
                         prevCharNum = false;
                         break;
                     case "*":
