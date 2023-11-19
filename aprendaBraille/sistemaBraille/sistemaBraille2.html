@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/index.css"> <!-- Estilo padrão das páginas -->
+    <link id="css" href="../../css/braille-big.css" rel="stylesheet"> <!-- faz parte da biblioteca Braille -->
+    <script src="../../js/braille-tools.js"></script> <!-- faz parte da biblioteca Braille -->
+    <link rel="icon" type="image/png" href="../css/br.gif"> <!-- Icone da página -->
+
+    <title>Sistema Braille</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div > <h2>Sistema Braille</h2> </div>
+        <p style="text-align: justify;">Iniciando a partir desta compreensão e objetivando auxiliar professores videntes no aprendizado da linguagem Braille, de forma mais rápida e de uma perspectiva mais fácil, visto que a leitura é feita de forma visual, esta plataforma traz uma proposta de aprendizagem baseada em padrões de similaridade dos caracteres Braille, conforme mostrado na Figura 2.</p>
+        <img src="../css/AlfabetoBraillePadraoPT.png" alt="Sinais Básicos do Sistema Braille">
+        <p style="font-size: 12px; text-align: center;">Figura 2: Alfabeto Braille organizado por padrão</p>
+
+        <p style="text-align: justify;">Assim, organizou-se as combinações das letras com base na semelhança visual dos caracteres Braille, em três níveis de instrução, conforme os padrões definidos e apresentados na Figura 2. No nível 1, os arranjos de caracteres envolvem a apresentação do conjunto de amostra do 1º padrão composto por oito letras organizadas em 4 pares; no nível 2 é apresentado o 2º padrão formado por 3 pares de letras; o nível 3 envolve o 3º padrão que é composto por três conjuntos de 4 letras cada, totalizando 12 letras.</p>   
+  
+        <p style="text-align: justify;">
+            No 1º padrão, têm-se as letras <strong>𝑒𝑖</strong> ,<strong>𝑑𝑓</strong> ,<strong>ℎ𝑗</strong> ,<strong>𝑟𝑤</strong>  que são os caracteres Braille organizados por possuírem similaridade de espelhamento no eixo <strong>𝑦</strong> . Ou seja, uma reflexão no eixo <strong>𝑦</strong> . O 2º padrão estão as letras <strong>𝑚𝑢</strong> , <strong>𝑛𝑧</strong>  e <strong>𝑝𝑣</strong> , que também são organizadas por similaridade, mas com reflexão no eixo <strong>𝑥</strong> . Os caracteres do 3º padrão, denominados de complementaridade, estão organizados em 3 grupos de 4 letras, <strong>𝑎𝑏𝑘𝑙</strong> , <strong>𝑐𝑔𝑥𝑦</strong>  e <strong>𝑜𝑠𝑡𝑞</strong> , seguindo um padrão sequencial de preenchimento da cela Braille para esses conjuntos de caracteres, em que cada caractere complementa e ajuda a lembrar do próximo.
+        </p>
+
+        <p style="text-align: justify;">
+            Desta forma, o arranjo <strong>𝑎𝑏𝑘𝑙</strong> é formado pela combinação dos pontos da primeira coluna vertical da cela Braille, que são os pontos 1, 12, 13 e 123, respectivamente. Já o arranjo <strong>𝑐𝑔𝑥𝑦</strong>  é formado pelo preenchimento dos pontos da linha 1, linhas 1 e 2, linhas 1 e 3 e linhas 1, 2 e 3, sendo formado pelas combinações dos pontos 14, 1245, 1346 e 13456, respectivamente. Por fim, o arranjo do terceiro conjunto, <strong>𝑜𝑠𝑡𝑞</strong> , é formado pelos pontos 135, 234, 2345 e 12345, respectivamente.
+        </p>
+        <button class="button"> <a href="../padrao1/padrao1.html" >Avançar</a></button> 
+    </div>
+
+    <footer>
+        <button class="button"><a href="../../menu.html">Inicio</a></button>
+    </footer>
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script> <!-- Biblioteca Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script><!-- Biblioteca de autenticação Firebase -->
+<script src="../../js/firebase.js"> </script> <!-- Script iniciando o Firebase -->
+<script src="../../js/login.js"> </script> <!-- Script com as funções de Login -->
+
+</html>

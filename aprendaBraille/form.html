@@ -26,7 +26,7 @@
                 <option selected disabled ></option>
                 <option value="Masculino">Masculino</option>
                 <option value="Feminino">Feminino</option>
-                <option value="Preferiu não informar">Prefiro não dizer</option>
+                <option value="Preferiu não informar">Prefiro não informar</option>
             </select>
 
             <label for="idade">Qual a sua idade?</label>
@@ -35,6 +35,7 @@
             <label for="formacao">Formação acadêmica (última concluída):</label>
             <select id="formacao" required>
                 <option selected disabled > </option>
+                <option value="Ensino Médio">Ensino Médio</option>
                 <option value="Graduação">Graduação</option>
                 <option value="Especialização">Especialização</option>
                 <option value="Mestrado">Mestrado</option>
@@ -51,20 +52,8 @@
                 <option value="Não">Não</option>
             </select>
 
-            <label for="atuacao">Qual a sua formação?</label>
-            <select id="atuacao" required>
-                <option selected disabled > </option>
-                <option value="Computação">Computação</option>
-                <option value="Engenharia">Engenharia</option>
-                <option value="Matemática">Matemática</option>
-                <option value="Letras">Letras</option>
-                <option value="Física">Física</option>
-                <option value="Pedagogia">Pedagogia</option>
-                <option value="Educação Física">Educação Física</option>
-                <option value="Química">Química</option>
-                <option value="História">História</option>
-                <option value="Outros">Outros</option>
-            </select>
+            <label for="atuacao">Qual a sua formação? (Deixe em branco caso não possua)</label>
+                <input type="text" id="atuacao">
 
             <label for="braille">Qual o seu nível de conhecimento em Braille?</label>
             <select id="braille" required>
