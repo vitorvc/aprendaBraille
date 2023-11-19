@@ -8,44 +8,11 @@
     <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script> <!-- Biblioteca Firebase -->
     <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script> <!-- Biblioteca de envio de dados para o BD -->
     <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script> <!-- Biblioteca de autenticação Firebase -->
-    <script type="module" src="./js/firebase.js"></script> <!-- Script iniciando o Firebase -->
-    <script type="module" src="./js/formulario.js"></script> <!-- Script com as funções de envio do formulário -->
+    <script src="./js/firebase.js"> </script> <!-- Script iniciando o Firebase -->
+    
 
-    <title>Formulário</title>
+    <title>Menu</title>
 </head>
-
-<script>
-
-const db = firebase.firestore();
-
-const form = document.getElementById('feedbackF orm');
-
-
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const email = form['email'].value;
-
-    db.collection('respostasForm').add({
-        email: email,
-        genero: genero,
-        idade: idade,
-        formacao: formacao,
-        nacionalidade: nacionalidade,
-        eprofessor: eprofessor,
-        atuacao: atuacao,
-        braille: braille
-    })
-    .then(() => {
-        alert('Formulário enviado com sucesso!');
-        window.location.href = "./menu.html";
-        form.reset();
-    })
-    .catch(error => {
-        console.error('Erro ao enviar formulário: ', error);
-    });
-});
-</script>
 
 <style>
     body {
@@ -89,6 +56,13 @@ form.addEventListener('submit', (e) => {
     }
 </style>
 <body>
+
+    <header>
+        <div id="user-div">
+            <h3></h3>
+    
+    </header>
+
     <div class="form-container">
         <h2>Feedback</h2>
         <form id="feedbackForm">
@@ -99,7 +73,30 @@ form.addEventListener('submit', (e) => {
         </form>
     </div>
 
-</body>
 
+    <script>
+
+        const db = firebase.firestore();
+        
+        const form = document.getElementById('feedbackForm');
+        
+        
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const feedback = form['feedback'].value;
+        
+            db.collection(firebase.auth().currentUser.email).doc('Feedback').set({
+                    Feedback: feedback
+            })
+            .then(() => {
+                alert('Formulário enviado com sucesso!');
+            })
+            .catch(error => {
+                console.error('Erro ao enviar formulário: ', error);
+            });
+        });
+        </script>
+</body>
+<script src="./js/login.js"> </script> <!-- Script com as funções de Login -->
 
 </html>
