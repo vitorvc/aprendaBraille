@@ -33,7 +33,7 @@ function verificarRespostas(respostasUsuario) {
 
 async function enviarDadosParaFirestore(email, tentativas) {
     return new Promise((resolve, reject) => {
-        db.collection("respostasPadrao3").doc(email).set({
+        db.collection(email).doc('Respostas Padrão 3').set({
             exercicio1Tentativas: tentativas,
             exercicio2Tentativas: 0,
             exercicio3Tentativas: 0,

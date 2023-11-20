@@ -32,7 +32,7 @@ function verificarRespostas(respostasUsuario) {
 
 async function enviarDadosParaFirestore(email, tentativas) {
     return new Promise((resolve, reject) => {
-        db.collection("respostasPadrao3").doc(email).update({
+        db.collection(email).doc('Respostas Padrão 3').update({
             exercicio2Tentativas: tentativas,
         })
         .then(() => {

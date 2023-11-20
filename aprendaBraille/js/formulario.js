@@ -15,7 +15,7 @@ form.addEventListener('submit', (e) => {
     const atuacao = form['atuacao'].value;
     const braille = form['braille'].value;
 
-    db.collection('respostasForm').add({
+    db.collection(firebase.auth().currentUser.email).doc('Formulário').set({
         email: email,
         genero: genero,
         idade: idade,

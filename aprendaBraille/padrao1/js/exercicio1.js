@@ -14,13 +14,17 @@ function verificar() {
     const acertou = verificarRespostas(respostasArray);
 
     if (acertou) {
+        
         enviarDadosParaFirestore(firebase.auth().currentUser.email, numeroTentativas)
+        
             .then(() => {
                 alert('Parabéns! Respostas corretas.');
                 window.location.href = "./exercicio2.html";
             })
             .catch(error => console.error("Erro ao enviar dados para o Firestore: ", error));
     } else {
+
+        enviarDadosParaFirestore(firebase.auth().currentUser.email, numeroTentativas)
         alert('Tente novamente.');
         alert(`Número de tentativas: ${numeroTentativas}`);
     }
@@ -33,7 +37,7 @@ function verificarRespostas(respostasUsuario) {
 
 async function enviarDadosParaFirestore(email, tentativas) {
     return new Promise((resolve, reject) => {
-        db.collection("respostasPadrao1").doc(email).set({
+        db.collection(email).doc('Respostas Padrão 1').set({
             exercicio1Tentativas: tentativas,
             exercicio2Tentativas: 0,
             exercicio3Tentativas: 0,

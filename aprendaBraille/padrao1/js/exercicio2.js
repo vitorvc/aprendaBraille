@@ -21,6 +21,7 @@ function verificar() {
             })
             .catch(error => console.error("Erro ao enviar dados para o Firestore: ", error));
     } else {
+        enviarDadosParaFirestore(firebase.auth().currentUser.email, numeroTentativas)
         alert('Tente novamente.');
         alert(`Número de tentativas: ${numeroTentativas}`);
     }
@@ -32,7 +33,7 @@ function verificarRespostas(respostasUsuario) {
 
 async function enviarDadosParaFirestore(email, tentativas) {
     return new Promise((resolve, reject) => {
-        db.collection("respostasPadrao1").doc(email).update({
+        db.collection(email).doc('Respostas Padrão 1').update({
             exercicio2Tentativas: tentativas,
         })
         .then(() => {
