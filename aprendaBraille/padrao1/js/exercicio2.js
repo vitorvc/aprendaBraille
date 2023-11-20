@@ -2,7 +2,7 @@ const db = firebase.firestore();
 firebase.initializeApp(firebaseConfig);
 
 let numeroTentativas = 0;
-const respostasCorretas = ['hotel', 'jarra','janela', 'hora'];
+const respostasCorretas = ['hoje', 'jedi','jaca', 'hora'];
 
 function verificar() {
     numeroTentativas++;
