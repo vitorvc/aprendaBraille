@@ -20,6 +20,25 @@ header {
     z-index: 1000; 
 }
 
+.lista {
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: auto;
+}
+
+.palavras {
+    list-style-type: none;
+    padding: 0;
+}
+
+.palavra {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
 .braille-section {
     display: flex;
     display: block;
@@ -132,6 +151,24 @@ li{
     border-radius: 5px;
     transition: background-color 0.3s;
     cursor: pointer;
+}
+
+.botao {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #5a5a5a; /* Cor de fundo mais escura para o botão */
+    color: #fff;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #c4c4c4; /* Cor mais escura ao passar o mouse sobre o botão */
 }
 
 .button a {

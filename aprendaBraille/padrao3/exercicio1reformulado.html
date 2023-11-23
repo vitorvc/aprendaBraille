@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/index.css"> <!-- Estilo padrão das páginas -->
+    <link id="css" href="../../css/braille-big.css" rel="stylesheet"> <!-- faz parte da biblioteca Braille -->
+    <script src="../../js/braille-tools.js"></script> <!-- faz parte da biblioteca Braille -->
+    <link rel="icon" type="image/png" href="../css/br.gif"> <!-- Icone da página -->
+   
+    <title>Exercicio 1</title>
+        <style>
+
+
+
+
+
+
+        </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Exercício 1</h1>
+        <p>Preencha os campos da direita com o número da sua respectiva palavra.</p>
+        <div class="lista">
+            <ul class="palavras">
+                <li class="palavra" data-index="1">1. aba</li>
+                <li class="palavra" data-index="2">2. bia</li>
+                <li class="palavra" data-index="3">3. kit</li>
+                <li class="palavra" data-index="4">4. luz</li>
+            </ul>
+
+            <ul>
+                <li style="display: flex;">
+                    <input name="words" class="resposta-input" type="text" maxlength="1" style="height: 40px; width: 40px;">
+                    <script> document.write(br.braille("bia"))</script>
+                </li>
+                <li style="display: flex;">
+                    <input name="words" class="resposta-input" type="text" maxlength="1" style="height: 40px; width: 40px;">
+                    <script> document.write(br.braille("luz"))</script>
+                </li>
+                <li style="display: flex;">
+                    <input name="words" class="resposta-input" type="text" maxlength="1" style="height: 40px; width: 40px;">
+                    <script> document.write(br.braille("aba"))</script>
+                </li>
+                <li style="display: flex;">
+                    <input name="words" class="resposta-input" type="text" maxlength="1" style="height: 40px; width: 40px;">
+                    <script> document.write(br.braille("kit"))</script>
+                </li>
+            </ul>
+        </div>
+        <a class="botao" onclick="verificarRespostas()" >Próximo</a>
+    </div>
+
+    <footer>
+        <a class="botao" href="../../menu.html">Inicio</a>
+    </footer>
+</body>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script> <!-- Biblioteca Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script> <!-- Biblioteca de autenticação Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore-compat.js"></script> <!-- Biblioteca de envio de dados para o BD -->
+<script src="../../js/firebase.js"></script> <!-- Script iniciando o Firebase -->
+<script src="../../js/login.js"></script> <!-- Script com as funções de Login -->
+<script src="./js/exercicio1reformulado.js"></script> <!-- Script com as funções do exercicio -->
+
+</html>
