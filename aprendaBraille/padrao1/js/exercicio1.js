@@ -43,7 +43,6 @@ async function enviarDadosParaFirestore(email, tentativas) {
             exercicio4Tentativas: 0,
         })
         .then(() => {
-            alert("Dados enviados");
             resolve();
         })
         .catch(error => {

@@ -1,0 +1,59 @@
+<html>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css"> <!-- Estilo padrão das páginas -->
+    <link id="css" href="../css/braille-big.css" rel="stylesheet"> <!-- faz parte da biblioteca Braille -->
+    <link rel="icon" type="image/png" href="./css/br.gif"> <!-- Icone da página -->
+    
+    <title>Traduzir Letras</title>
+
+    <script src="../js/braille-tools.js"></script>
+	<script language="javascript">
+		function elem(id){
+			return document.getElementById(id);
+		}
+		function showBraille() {
+			var message = elem("txtBraille").value;
+			elem('myBraille').innerHTML=br.braille(message);
+		}
+		function BrText() {
+			var message = elem("txtBr").value;
+			elem('myBr').innerHTML=br.braille(message);
+		}
+		function setCSS(size) {
+			elem('css').href='css/braille-'+size+'.css';
+		}
+	</script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tradução</h1>
+        <h2>Nesta página você pode traduzir letras, palavras, números e expressões.</h2>
+        <div style=";width:1px;"></div>
+        <div id="myBraille" class="braille" style="margin-top:30px;min-height:70px;min-width:1px;"></div>
+
+        <input id="txtBraille" class="form-control pull-left" style="width:300px" type="text" >
+
+            <a class="botao" onclick="showBraille()" >Traduzir</a>
+    
+
+    </div>
+
+    <footer>
+        <a class="botao" href="../menu.html">Inicio</a>
+    </footer>
+
+</body>
+
+
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script> <!-- Biblioteca Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script> <!-- Biblioteca de autenticação Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore-compat.js"></script> <!-- Biblioteca de envio de dados para o BD -->
+<script src="../js/firebase.js"></script> <!-- Script iniciando o Firebase -->
+<script src="../js/login.js"></script> <!-- Script com as funções de Login -->
+<script src="../js/braille-tools.js"></script> <!-- Script com as funções da biblioteca Braille -->
+
+</html>
