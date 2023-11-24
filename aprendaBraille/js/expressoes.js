@@ -19,7 +19,7 @@ var palavraAtual;
         }
         
         function gerarLetra() {
-            const palavras = ["5*5=25", "3*3=9","1+1=2", "3-1=2"];
+            const palavras = ["5*5=25", "3*3=9","1+1=2", "3-1=2","1+1=2","2*7=14","3/2=1,5","8-1=7"];
             var palavraAleatoria = palavras[Math.floor(Math.random() * palavras.length)];
             palavraAtual = palavraAleatoria;
             return palavraAleatoria;

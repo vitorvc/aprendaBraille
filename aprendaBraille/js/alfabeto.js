@@ -51,8 +51,9 @@ enviarDadosParaFirestore(emailUsuario, contCorretas, contIncorretas);
 contIncorretas++;
 atualizarContadores();
 var emailUsuario =   firebase.auth().currentUser.email; 
-enviarDadosParaFirestore(emailUsuario, contCorretas, contIncorretas);
 alert("Tente novamente.");
+enviarDadosParaFirestore(emailUsuario, contCorretas, contIncorretas);
+
 }
 document.getElementById("entrada").value ='';
 }
