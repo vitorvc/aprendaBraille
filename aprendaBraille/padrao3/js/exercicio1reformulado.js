@@ -4,7 +4,7 @@ firebase.initializeApp(firebaseConfig);
 let numeroTentativas = 0;
    
    function verificarRespostas() {
-       const respostasCorretas = ['2', '1', '4', '3'];
+       const respostasCorretas = ['2', '4', '1', '3'];
        const inputs = document.querySelectorAll('.resposta-input');
        let corretas = 0;
    
