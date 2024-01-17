@@ -21,8 +21,7 @@
         <form id="feedbackForm">
             <label for="feedback">Comentários:</label>
             <textarea id="feedback" name="feedback" required></textarea>
-    
-            <button class="button" type="submit">Enviar</button>
+            <button class="button" type="submit" >Enviar</button>
         </form>
     </div>
 
@@ -43,6 +42,7 @@
             })
             .then(() => {
                 alert('Formulário enviado com sucesso!');
+                window.location.href = "../menu.html";
             })
             .catch(error => {
                 console.error('Erro ao enviar formulário: ', error);
@@ -51,7 +51,7 @@
         </script>
 
 <footer>
-    <a class="botao" href="../../menu.html">Inicio</a>
+    <a class="botaoo" href="../../menu.html">Inicio</a>
 </footer>
 
 </body>
