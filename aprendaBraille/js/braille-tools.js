@@ -1,31 +1,39 @@
 var br = {
     braille: function (message) { 
-        var txt=''; 
-        var myChar, prevCharNum, inQuote 
+        var txt = ''; 
+        var myChar, prevCharNum, inQuote;
+        var isFirstChar = true; // Flag para indicar se é o primeiro caractere da palavra
 
         function BrailleChar(bPix, bAlt) {
-            return '<div class="br br-'+bPix+'" title="'+bAlt+'"></div>'
+            return '<div class="br br-' + bPix + '" title="' + bAlt + '"></div>';
         }
 
-        for (var i=0; i<message.length; i++) {
+        for (var i = 0; i < message.length; i++) {
             myChar = message.charAt(i);
-            if ((myChar>="a") && (myChar<="z")) { // a to z
-                    txt+=BrailleChar(myChar, myChar);
-                    prevCharNum = false;            
-            } else if((myChar>="A") && (myChar<="Z")) { // A to Z
-                    txt+=BrailleChar("cap", "Caps")+BrailleChar(myChar, myChar);
-                    prevCharNum = false;         
-            } else if((myChar>"0") && (myChar<="9")) {
-                    if (!prevCharNum){
-                            txt+=BrailleChar("num", "Number");
-                    } 
-                    txt+=BrailleChar(String.fromCharCode(myChar.charCodeAt(0) + 48), myChar); 
-                    prevCharNum = true;            
+            if ((myChar >= "a") && (myChar <= "z")) { // a to z
+                txt += BrailleChar(myChar, myChar);
+                prevCharNum = false;
+                isFirstChar = false; // Não é mais o primeiro caractere da palavra
+            } else if ((myChar >= "A") && (myChar <= "Z")) { // A to Z
+                if (isFirstChar) {
+                    txt += BrailleChar("dec");
+                    isFirstChar = false; // Não é mais o primeiro caractere da palavra
+                }
+                txt += BrailleChar(myChar, myChar);
+                prevCharNum = false;
+            } else if ((myChar > "0") && (myChar <= "9")) {
+                if (!prevCharNum) {
+                    txt += BrailleChar("num", "Number");
+                } 
+                txt += BrailleChar(String.fromCharCode(myChar.charCodeAt(0) + 48), myChar); 
+                prevCharNum = true;
+                isFirstChar = false; // Não é mais o primeiro caractere da palavra
             } else {
                 switch (myChar) {
                     case " ": 
                         txt+=BrailleChar("sp", "Space");
                         prevCharNum = false;
+                        isFirstChar = true; // Próximo caractere é o primeiro de uma nova palavra
                         break;
                     case "0":
                         if (!prevCharNum){
@@ -33,11 +41,13 @@ var br = {
                         }
                         txt+=BrailleChar("j", "0");      
                         prevCharNum = true;
+                        isFirstChar = false; // Não é mais o primeiro caractere da palavra
                         break;
                     case "\n":
                         txt+="<br><br>";
                         nbCharsInLine = -1;
                         prevCharNum = false;
+                        isFirstChar = true; // Próximo caractere é o primeiro de uma nova palavra
                         break;
                     case ".":
                         txt+=BrailleChar("qs", "'"); //apostofre e ponto são iguais
@@ -113,16 +123,7 @@ var br = {
                 }
             }
         }
+
         return txt;
     },
-
-    alphabet: function(){
-        var alpha='<div class="braille-doc2 alphabet">',
-            char;
-        for(var i=97;i<123;i++){
-            char=String.fromCharCode(i);
-            alpha+='<div><span>'+char+'</span><div class="br br-'+char+'"></div></div>'; 
-        }
-        return alpha+'</div>';
-    }
 }
